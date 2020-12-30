@@ -1,0 +1,11 @@
+<h1> {{ titulo }} </h1>
+
+<h2>Directiva IF:</h2>
+
+<h3 *ngIf="estado">Mostrando el Mensaje</h3>
+
+<button (click)="cambiarEstado()">{{ (estado)?'Ocultar Mensaje':'mostrar Mensaje' }}</button>
+
+<ul>
+    <li *ngFor="let nom of nombres">{{ nom }}</li>
+</ul>
