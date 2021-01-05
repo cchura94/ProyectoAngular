@@ -5,6 +5,7 @@ import { DirectivasComponent } from './directivas/directivas.component';
 import { IngresarComponent } from './ingresar/ingresar.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
+import { PublicacionComponent } from './publicacion/publicacion.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,10 @@ const routes: Routes = [
   {
     path: 'contacto',
     component: ContactoComponent,
+  },
+  {
+    path: 'publicaciones',
+    component: PublicacionComponent,
   },
   {
     path: 'ingresar',

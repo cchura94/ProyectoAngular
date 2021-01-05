@@ -1,0 +1,18 @@
+<h1>Lista de Publicaciónes</h1>
+
+<h1 *ngIf="cargando">Cargando...</h1>
+
+<table border="1">
+    <tr>
+        <td>ID</td>
+        <td>NOMBRE</td>
+        <td>ESTADO</td>
+    </tr>
+    <tr *ngFor="let post of publicaciones">
+        <td>{{ post.id }}</td>
+        <td>{{ post.title }}</td>
+        <td *ngIf="post.completed" style="background-color:#0f0">{{ post.completed }}</td>
+        <td *ngIf="!post.completed" style="background-color:#f00">{{ post.completed }}</td>
+    
+    </tr>
+</table>

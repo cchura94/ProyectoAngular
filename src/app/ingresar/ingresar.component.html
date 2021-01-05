@@ -1,1 +1,21 @@
-<p>ingresar works!</p>
+<h1>Iniciar Sesion</h1>
+
+<form [formGroup]="loginForm">
+  
+    <label>
+      Ingrese su correo:
+      <input type="text" formControlName="email">
+    </label>
+    <br>
+  
+    <label>
+      Ingrese su Contraseña:
+      <input type="password" formControlName="password">
+    </label>
+    <br>
+    <button type="submit" [disabled]="!loginForm.valid" (click)="ingresar()">Ingresar</button>
+  
+  </form>
+
+  <hr>
+  {{ loginForm.value | json }}
