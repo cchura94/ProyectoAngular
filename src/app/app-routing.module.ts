@@ -34,6 +34,11 @@ const routes: Routes = [
     path: 'ingresar',
     component: IngresarComponent,
   },
+  {
+    path: 'admin',
+    loadChildren: () =>
+      import('./admin/admin.module').then((m) => m.AdminModule),
+  },
 ];
 
 @NgModule({

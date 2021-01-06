@@ -13,6 +13,7 @@ import { IngresarComponent } from './ingresar/ingresar.component';
 import { ItemComponent } from './item/item.component';
 import { PublicacionComponent } from './publicacion/publicacion.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
