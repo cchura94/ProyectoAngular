@@ -14,6 +14,7 @@ import { ItemComponent } from './item/item.component';
 import { PublicacionComponent } from './publicacion/publicacion.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PrincipalComponent } from './principal/principal.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     IngresarComponent,
     ItemComponent,
     PublicacionComponent,
+    PrincipalComponent,
   ],
   imports: [
     BrowserModule,

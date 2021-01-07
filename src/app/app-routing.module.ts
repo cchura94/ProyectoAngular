@@ -5,34 +5,41 @@ import { DirectivasComponent } from './directivas/directivas.component';
 import { IngresarComponent } from './ingresar/ingresar.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
+import { PrincipalComponent } from './principal/principal.component';
 import { PublicacionComponent } from './publicacion/publicacion.component';
 
 const routes: Routes = [
   {
     path: '',
     component: InicioComponent,
-  },
-  {
-    path: 'nosotros',
-    component: NosotrosComponent,
     children: [
       {
-        path: 'directivas',
-        component: DirectivasComponent,
+        path: '',
+        component: PrincipalComponent,
+      },
+      {
+        path: 'nosotros',
+        component: NosotrosComponent,
+        children: [
+          {
+            path: 'directivas',
+            component: DirectivasComponent,
+          },
+        ],
+      },
+      {
+        path: 'contacto',
+        component: ContactoComponent,
+      },
+      {
+        path: 'publicaciones',
+        component: PublicacionComponent,
+      },
+      {
+        path: 'ingresar',
+        component: IngresarComponent,
       },
     ],
-  },
-  {
-    path: 'contacto',
-    component: ContactoComponent,
-  },
-  {
-    path: 'publicaciones',
-    component: PublicacionComponent,
-  },
-  {
-    path: 'ingresar',
-    component: IngresarComponent,
   },
   {
     path: 'admin',
