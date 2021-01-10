@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ContactoComponent } from './contacto/contacto.component';
 import { DirectivasComponent } from './directivas/directivas.component';
+import { AuthGuard } from './guards/auth.guard';
 import { IngresarComponent } from './ingresar/ingresar.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
@@ -34,6 +35,7 @@ const routes: Routes = [
       {
         path: 'publicaciones',
         component: PublicacionComponent,
+        //canActivate: [AuthGuard],
       },
       {
         path: 'ingresar',
@@ -45,6 +47,7 @@ const routes: Routes = [
     path: 'admin',
     loadChildren: () =>
       import('./admin/admin.module').then((m) => m.AdminModule),
+    canActivate: [AuthGuard],
   },
 ];
 

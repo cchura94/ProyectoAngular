@@ -7,6 +7,9 @@ import { CategoriaComponent } from './categoria/categoria.component';
 import { AdminRoutingModule } from './admin-routing.module';
 import { MaterialModule } from '../material/material.module';
 import { NavegacionComponent } from '../material/navegacion/navegacion.component';
+import { EstablecimientoListaComponent } from './establecimiento/establecimiento-lista/establecimiento-lista.component';
+import { EstablecimientoCrearComponent } from './establecimiento/establecimiento-crear/establecimiento-crear.component';
+import { EstablecimientoModificarComponent } from './establecimiento/establecimiento-modificar/establecimiento-modificar.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +18,9 @@ import { NavegacionComponent } from '../material/navegacion/navegacion.component
     ServicioComponent,
     CategoriaComponent,
     NavegacionComponent,
+    EstablecimientoListaComponent,
+    EstablecimientoCrearComponent,
+    EstablecimientoModificarComponent,
   ],
   imports: [CommonModule, AdminRoutingModule, MaterialModule],
 })

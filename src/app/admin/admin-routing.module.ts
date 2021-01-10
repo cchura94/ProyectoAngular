@@ -5,6 +5,9 @@ import { AdminComponent } from './admin.component';
 import { EstablecimientoComponent } from './establecimiento/establecimiento.component';
 import { ServicioComponent } from './servicio/servicio.component';
 import { CategoriaComponent } from './categoria/categoria.component';
+import { EstablecimientoListaComponent } from './establecimiento/establecimiento-lista/establecimiento-lista.component';
+import { EstablecimientoCrearComponent } from './establecimiento/establecimiento-crear/establecimiento-crear.component';
+import { EstablecimientoModificarComponent } from './establecimiento/establecimiento-modificar/establecimiento-modificar.component';
 
 const routes: Routes = [
   {
@@ -14,6 +17,20 @@ const routes: Routes = [
       {
         path: 'establecimiento',
         component: EstablecimientoComponent,
+        children: [
+          {
+            path: '',
+            component: EstablecimientoListaComponent,
+          },
+          {
+            path: 'nuevo',
+            component: EstablecimientoCrearComponent,
+          },
+          {
+            path: ':id/editar',
+            component: EstablecimientoModificarComponent,
+          },
+        ],
       },
       {
         path: 'servicio',
